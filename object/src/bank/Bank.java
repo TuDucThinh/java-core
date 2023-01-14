@@ -12,17 +12,17 @@ public class Bank {
         sendMoney = scanner.nextDouble();
         return sendMoney + this.totalMoney;
     }
-    public Object withdrawal (double withdrawal) {
+    public double withdrawal (double withdrawal) {
 //        double withdrawal;
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Please enter the amount to withdraw: ");
         withdrawal = scanner.nextDouble();
-        if (this.totalMoney > withdrawal ) {
-            return "remaining balance is: " + (this.totalMoney - withdrawal);
+        if ((this.totalMoney - withdrawal) >= 0 ) {
+            return withdrawal;
         } else
-            return "insufficient balance.";
-
+            System.out.println("insufficient balance.");
+        return 0;
     }
     public String cardInformation (double cardInformation){
         String name = "name: TU DUC THINH";
