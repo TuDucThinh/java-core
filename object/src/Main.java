@@ -23,7 +23,7 @@ public class Main {
                 System.out.println("the current amount in the account is: " + bank.sendMoney(bank.totalMoney));
                 break;
             case 2:
-                System.out.println(bank.withdrawal(bank.totalMoney));
+                System.out.println("the money you get is: " + bank.withdrawal(bank.totalMoney));
                 break;
             case 3:
                 System.out.println(bank.cardInformation(bank.totalMoney));
